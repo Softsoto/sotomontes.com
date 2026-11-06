@@ -1,6 +1,6 @@
 // Para agregar un proyecto: añade una entrada aquí y ejecuta `node build.mjs`.
-// image: archivo en assets/img (sin extensión). Sin image se dibuja una portada tipográfica.
-// cover: color de la portada tipográfica (ink, moss, wine, navy, ochre).
+// image: archivo en assets/img (sin extensión). Sin image se dibuja una portada generada.
+// El color, el icono y la etiqueta de cada proyecto están en look.mjs.
 // url: solo para proyectos con repositorio o demo pública.
 
 export const categories = [
@@ -11,7 +11,7 @@ export const categories = [
 
 export const projects = [
   // Escritorio
-  { name: 'SOTO PLAYER', cat: 'escritorio', cover: 'wine',
+  { name: 'SOTO PLAYER', cat: 'escritorio',
     desc: 'Plataforma multimedia para Windows: video, música, streams de red y TV en vivo en una sola app, con skins y complementos.',
     stack: ['Tauri 2', 'Rust', 'React', 'libmpv'] },
   { name: 'VeloxDM', cat: 'escritorio', image: 'veloxdm',
@@ -32,25 +32,25 @@ export const projects = [
   { name: 'EcMenu X', cat: 'escritorio', image: 'ecmenux',
     desc: 'Personaliza el clic derecho de Windows con más de 50 acciones, submenús y un limpiador, sin permisos de administrador.',
     stack: ['C#', '.NET 10', 'WPF'] },
-  { name: 'LivePaper', cat: 'escritorio', cover: 'navy',
+  { name: 'LivePaper', cat: 'escritorio',
     desc: 'Fondos de pantalla animados: escenas 2D y 3D, video, web y apps, con un motor de render WebGL propio.',
     stack: ['C#', '.NET 10', 'WebGL'] },
-  { name: 'SigloNav', cat: 'escritorio', cover: 'moss',
+  { name: 'SigloNav', cat: 'escritorio',
     desc: 'Navegador de doble motor: Chromium para la web actual e Internet Explorer 11 con Java para aplicativos heredados, en la misma ventana.',
     stack: ['C#', 'WebView2', 'IE11'] },
-  { name: 'Enterprise SSO', cat: 'escritorio', cover: 'ink',
+  { name: 'Enterprise SSO', cat: 'escritorio',
     desc: 'Bóveda de credenciales cifrada que inicia sesión sola en aplicativos web y de escritorio, con una única clave maestra.',
     stack: ['C#', '.NET 10', 'AES-256-GCM'] },
-  { name: 'LegionFix', cat: 'escritorio', cover: 'moss',
+  { name: 'LegionFix', cat: 'escritorio',
     desc: 'Diagnóstico y reparación de Windows con una interfaz cinematográfica, donde cada contador y hallazgo es un dato real del equipo.',
     stack: ['C#', '.NET 10', 'WPF'] },
-  { name: 'HD Guardian', cat: 'escritorio', cover: 'navy',
+  { name: 'HD Guardian', cat: 'escritorio',
     desc: 'Monitor de salud de discos: estado SMART, temperatura, horas de uso y alertas.',
     stack: ['PowerShell', 'WMI'] },
-  { name: 'SSA Studio', cat: 'escritorio', cover: 'ink',
+  { name: 'SSA Studio', cat: 'escritorio',
     desc: 'Cifrado AES, esteganografía y un formato propio .SSA para esconder y proteger archivos dentro de imágenes y audio.',
     stack: ['Python', 'Criptografía'] },
-  { name: 'Transcriptor de Audio', cat: 'escritorio', cover: 'ochre',
+  { name: 'Transcriptor de Audio', cat: 'escritorio',
     desc: 'Convierte audio y video a texto con Whisper, en tu propio equipo y sin enviar nada a la nube.',
     stack: ['Python', 'Whisper'] },
 
@@ -76,21 +76,21 @@ export const projects = [
   { name: 'Convertidor de extensiones', cat: 'web', image: 'convertidor-extensiones',
     desc: 'Renombra, numera, cambia la extensión y comprime muchos archivos a la vez, sin subirlos a ningún servidor.',
     stack: ['HTML', 'JavaScript'] },
-  { name: 'Generador de recibos', cat: 'web', cover: 'ochre',
+  { name: 'Generador de recibos', cat: 'web',
     desc: 'Recibos de pago editables sobre el propio documento, con códigos de barras GS1 generados a partir de los plazos.',
     stack: ['HTML', 'JavaScript'] },
-  { name: 'SquadCats', cat: 'web', cover: 'navy',
+  { name: 'SquadCats', cat: 'web',
     desc: 'Visor del casillero de Fortnite en una app web local, con inicio de sesión oficial por device-code.',
     stack: ['Python', 'FastAPI'] },
-  { name: 'Comederos de las gatas', cat: 'web', cover: 'wine',
+  { name: 'Comederos de las gatas', cat: 'web',
     desc: 'Una sola web para controlar dos comederos inteligentes, por WiFi local o por la nube.',
     stack: ['Python', 'Tuya'] },
 
   // Juegos
-  { name: 'Operación Quilcue', cat: 'juegos', cover: 'moss', status: 'En desarrollo',
+  { name: 'Operación Quilcue', cat: 'juegos', status: 'En desarrollo',
     desc: 'Juego de plataformas 3D con seis mundos, jefes y medallas, y niveles que un bot recorre con física real para validarlos.',
     stack: ['Unity 6', 'C#', 'URP'] },
-  { name: 'SPEX Studio', cat: 'juegos', cover: 'wine',
+  { name: 'SPEX Studio', cat: 'juegos',
     desc: 'Editor de mods para Scott Pilgrim EX: niveles, personajes, poderes, sprites y textos, aplicados en memoria sin tocar la carpeta del juego.',
     stack: ['Modding', 'Editor'] },
 ];

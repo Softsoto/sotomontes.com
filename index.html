@@ -4,231 +4,425 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sebastian Sotomontes · Desarrollador de software</title>
-  <meta name="description" content="Portafolio de Sebastian Sotomontes: aplicaciones de escritorio, web y utilidades que funcionan en tu equipo, sin servidores ni cuentas.">
+  <meta name="description" content="Portafolio de Sebastian Sotomontes: aplicaciones de escritorio, web y juegos. Software que corre en tu equipo, sin servidores ni cuentas.">
   <meta name="author" content="Sebastian Sotomontes">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0d0e11">
   <link rel="canonical" href="https://sotomontes.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sotomontes.com/">
   <meta property="og:title" content="Sebastian Sotomontes · Desarrollador de software">
-  <meta property="og:description" content="Portafolio de Sebastian Sotomontes: aplicaciones de escritorio, web y utilidades que funcionan en tu equipo, sin servidores ni cuentas.">
+  <meta property="og:description" content="Portafolio de Sebastian Sotomontes: aplicaciones de escritorio, web y juegos. Software que corre en tu equipo, sin servidores ni cuentas.">
   <meta property="og:image" content="https://sotomontes.com/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600;125,800&family=Instrument+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sebastian Sotomontes","url":"https://sotomontes.com","sameAs":["https://github.com/Softsoto"],"jobTitle":"Desarrollador de software"}</script>
 </head>
 <body>
-  <a class="skip" href="#proyectos">Saltar a los proyectos</a>
-  <header class="hero">
-    <p class="eyebrow">Desarrollador de software</p>
-    <h1>Sebastian<br>Sotomontes</h1>
-    <p class="lead">Creo aplicaciones de escritorio, web y utilidades. Me gustan las que funcionan en tu propio equipo, sin servidores ni cuentas, bien diseñadas y pensadas para gente real.</p>
-    <nav class="actions" aria-label="Principal">
-      <a class="btn btn-solid" href="#proyectos">Ver los 26 proyectos</a>
-      <a class="btn" href="https://github.com/Softsoto" rel="noopener me">GitHub ↗</a>
+  <a class="skip" href="#escritorio">Saltar a los proyectos</a>
+
+  <header class="bar">
+    <a class="bar-logo" href="#inicio" aria-label="Sebastian Sotomontes, inicio"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M4 3h24v8H13v3h15v15H4v-8h15v-3H4z"/></svg></a>
+    <nav class="bar-nav" aria-label="Secciones">
+      <a href="#inicio" data-nav="inicio">Inicio</a>
+      <a href="#escritorio" data-nav="escritorio">Escritorio</a>
+      <a href="#web" data-nav="web">Web</a>
+      <a href="#juegos" data-nav="juegos">Juegos</a>
+      <a href="#principios" data-nav="principios">Principios</a>
+      <a href="#contacto" data-nav="contacto">Contacto</a>
     </nav>
+    <a class="bar-cta" href="https://github.com/Softsoto" rel="noopener me">GitHub ↗</a>
+    <span class="bar-progress" aria-hidden="true"></span>
   </header>
 
-  <main id="proyectos">
-    <div class="toolbar">
-      <p>La mayoría del código es privado. Las capturas son de modos demo o datos de ejemplo.</p>
-      <div class="filters" role="group" aria-label="Filtrar proyectos">
-        <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
-        <button type="button" data-filter="escritorio" aria-pressed="false">Escritorio</button>
-        <button type="button" data-filter="web" aria-pressed="false">Web</button>
-        <button type="button" data-filter="juegos" aria-pressed="false">Juegos</button>
-      </div>
-    </div>
-    <section class="group" data-cat="escritorio" aria-labelledby="t-escritorio">
-      <header class="group-head">
-        <h2 id="t-escritorio">Aplicaciones de escritorio</h2>
-        <span class="count">14</span>
-      </header>
-      <ul class="grid">
-        <li class="card">
-          <div class="cover"><div class="poster poster-wine" aria-hidden="true"><span>SOTO PLAYER</span></div></div>
-          <h3>SOTO PLAYER</h3>
-          <p>Plataforma multimedia para Windows: video, música, streams de red y TV en vivo en una sola app, con skins y complementos.</p>
-          <div class="meta"><span class="stack">Tauri 2 · Rust · React · libmpv</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/veloxdm.jpg" alt="Captura de VeloxDM" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>VeloxDM</h3>
-          <p>Gestor de descargas con segmentación dinámica, colas, planificador, video, BitTorrent y extensión de navegador.</p>
-          <div class="meta"><span class="stack">C# · .NET 10 · WebView2</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/pdf-studio.jpg" alt="Captura de PDF Studio" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>PDF Studio</h3>
-          <p>Editor de PDF completo: crear, editar, anotar, firmar, OCR, formularios y exportar a Office.</p>
-          <div class="meta"><span class="stack">Electron · Vite · pdf-lib</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/omnicare.jpg" alt="Captura de OmniCare" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>OmniCare</h3>
-          <p>Centro de control para Windows: rendimiento, batería, diagnóstico y actualizaciones, con funciones específicas por marca de equipo.</p>
-          <div class="meta"><span class="stack">C# · .NET 10 · WebView2</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/mercado-manager.jpg" alt="Captura de Mercado Manager" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Mercado Manager</h3>
-          <p>Administra una tienda de Mercado Libre desde el escritorio, 100 % local y con la API oficial: publicaciones, ventas, envíos y rentabilidad.</p>
-          <div class="meta"><span class="stack">C# · WPF · Blazor Hybrid · SQLite</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/copropiedades.jpg" alt="Captura de Copropiedades" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Copropiedades</h3>
-          <p>Administración de conjuntos y edificios: cartera, asambleas, PQRS, contratos, presupuesto y correos masivos.</p>
-          <div class="meta"><span class="stack">C# · .NET 10 · WPF · SQLite</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/ecmenux.jpg" alt="Captura de EcMenu X" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>EcMenu X</h3>
-          <p>Personaliza el clic derecho de Windows con más de 50 acciones, submenús y un limpiador, sin permisos de administrador.</p>
-          <div class="meta"><span class="stack">C# · .NET 10 · WPF</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-navy" aria-hidden="true"><span>LivePaper</span></div></div>
-          <h3>LivePaper</h3>
-          <p>Fondos de pantalla animados: escenas 2D y 3D, video, web y apps, con un motor de render WebGL propio.</p>
-          <div class="meta"><span class="stack">C# · .NET 10 · WebGL</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-moss" aria-hidden="true"><span>SigloNav</span></div></div>
-          <h3>SigloNav</h3>
-          <p>Navegador de doble motor: Chromium para la web actual e Internet Explorer 11 con Java para aplicativos heredados, en la misma ventana.</p>
-          <div class="meta"><span class="stack">C# · WebView2 · IE11</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-ink" aria-hidden="true"><span>Enterprise SSO</span></div></div>
-          <h3>Enterprise SSO</h3>
-          <p>Bóveda de credenciales cifrada que inicia sesión sola en aplicativos web y de escritorio, con una única clave maestra.</p>
-          <div class="meta"><span class="stack">C# · .NET 10 · AES-256-GCM</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-moss" aria-hidden="true"><span>LegionFix</span></div></div>
-          <h3>LegionFix</h3>
-          <p>Diagnóstico y reparación de Windows con una interfaz cinematográfica, donde cada contador y hallazgo es un dato real del equipo.</p>
-          <div class="meta"><span class="stack">C# · .NET 10 · WPF</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-navy" aria-hidden="true"><span>HD Guardian</span></div></div>
-          <h3>HD Guardian</h3>
-          <p>Monitor de salud de discos: estado SMART, temperatura, horas de uso y alertas.</p>
-          <div class="meta"><span class="stack">PowerShell · WMI</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-ink" aria-hidden="true"><span>SSA Studio</span></div></div>
-          <h3>SSA Studio</h3>
-          <p>Cifrado AES, esteganografía y un formato propio .SSA para esconder y proteger archivos dentro de imágenes y audio.</p>
-          <div class="meta"><span class="stack">Python · Criptografía</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-ochre" aria-hidden="true"><span>Transcriptor de Audio</span></div></div>
-          <h3>Transcriptor de Audio</h3>
-          <p>Convierte audio y video a texto con Whisper, en tu propio equipo y sin enviar nada a la nube.</p>
-          <div class="meta"><span class="stack">Python · Whisper</span><span class="tag">Código privado</span></div>
-        </li>
-      </ul>
-    </section>
-    <section class="group" data-cat="web" aria-labelledby="t-web">
-      <header class="group-head">
-        <h2 id="t-web">Web y herramientas en el navegador</h2>
-        <span class="count">10</span>
-      </header>
-      <ul class="grid">
-        <li class="card">
-          <div class="cover"><img src="assets/img/comanda.jpg" alt="Captura de Comanda" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Comanda</h3>
-          <p>Menú digital gratis para pequeños negocios: el cliente arma su pedido desde el celular y llega por WhatsApp.</p>
-          <div class="meta"><span class="stack">Next.js 16 · TypeScript · PostgreSQL</span><a class="tag tag-link" href="https://github.com/Softsoto/comanda" rel="noopener">Ver código ↗</a></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/crm-personal.jpg" alt="Captura de CRM Personal" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>CRM Personal</h3>
-          <p>Panel personal todo en uno: credenciales, 2FA, notas, proyectos, finanzas, recibos y suscripciones.</p>
-          <div class="meta"><span class="stack">HTML · JavaScript · Node</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/epic-intelligence.jpg" alt="Captura de Epic Intelligence" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Epic Intelligence</h3>
-          <p>Convierte el PDF de exportación de datos de una cuenta de Epic Games en un panel claro, todo en el navegador.</p>
-          <div class="meta"><span class="stack">HTML · JavaScript</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/editor-pdf.jpg" alt="Captura de Editor PDF" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Editor PDF</h3>
-          <p>Anota, agrega texto y formas, rota o reordena páginas y exporta. El documento nunca sale de tu equipo.</p>
-          <div class="meta"><span class="stack">HTML · JavaScript</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/cuentas-de-cobro.jpg" alt="Captura de Cuentas de cobro" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Cuentas de cobro</h3>
-          <p>Genera cuentas de cobro en PDF con el valor en letras calculado solo, para independientes en Colombia.</p>
-          <div class="meta"><span class="stack">HTML · JavaScript</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/generador-plantillas.jpg" alt="Captura de Generador de plantillas" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Generador de plantillas</h3>
-          <p>Contratos, cartas y facturas con campos dinámicos y contadores, listos para exportar a PDF.</p>
-          <div class="meta"><span class="stack">HTML · JavaScript</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><img src="assets/img/convertidor-extensiones.jpg" alt="Captura de Convertidor de extensiones" width="800" height="500" loading="lazy" decoding="async"></div>
-          <h3>Convertidor de extensiones</h3>
-          <p>Renombra, numera, cambia la extensión y comprime muchos archivos a la vez, sin subirlos a ningún servidor.</p>
-          <div class="meta"><span class="stack">HTML · JavaScript</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-ochre" aria-hidden="true"><span>Generador de recibos</span></div></div>
-          <h3>Generador de recibos</h3>
-          <p>Recibos de pago editables sobre el propio documento, con códigos de barras GS1 generados a partir de los plazos.</p>
-          <div class="meta"><span class="stack">HTML · JavaScript</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-navy" aria-hidden="true"><span>SquadCats</span></div></div>
-          <h3>SquadCats</h3>
-          <p>Visor del casillero de Fortnite en una app web local, con inicio de sesión oficial por device-code.</p>
-          <div class="meta"><span class="stack">Python · FastAPI</span><span class="tag">Código privado</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-wine" aria-hidden="true"><span>Comederos de las gatas</span></div></div>
-          <h3>Comederos de las gatas</h3>
-          <p>Una sola web para controlar dos comederos inteligentes, por WiFi local o por la nube.</p>
-          <div class="meta"><span class="stack">Python · Tuya</span><span class="tag">Código privado</span></div>
-        </li>
-      </ul>
-    </section>
-    <section class="group" data-cat="juegos" aria-labelledby="t-juegos">
-      <header class="group-head">
-        <h2 id="t-juegos">Juegos y mods</h2>
-        <span class="count">2</span>
-      </header>
-      <ul class="grid">
-        <li class="card">
-          <div class="cover"><div class="poster poster-moss" aria-hidden="true"><span>Operación Quilcue</span></div></div>
-          <h3>Operación Quilcue</h3>
-          <p>Juego de plataformas 3D con seis mundos, jefes y medallas, y niveles que un bot recorre con física real para validarlos.</p>
-          <div class="meta"><span class="stack">Unity 6 · C# · URP</span><span class="tag">En desarrollo</span></div>
-        </li>
-        <li class="card">
-          <div class="cover"><div class="poster poster-wine" aria-hidden="true"><span>SPEX Studio</span></div></div>
-          <h3>SPEX Studio</h3>
-          <p>Editor de mods para Scott Pilgrim EX: niveles, personajes, poderes, sprites y textos, aplicados en memoria sin tocar la carpeta del juego.</p>
-          <div class="meta"><span class="stack">Modding · Editor</span><span class="tag">Código privado</span></div>
-        </li>
-      </ul>
-    </section>
-  </main>
+  <aside class="rail">
+    <nav aria-label="Índice">
+      <ol class="rail-list">
+        <li data-rail="inicio"><a href="#inicio">Inicio</a></li>
+        <li data-rail="escritorio"><a href="#escritorio">Escritorio</a></li>
+        <li data-rail="web"><a href="#web">Web</a></li>
+        <li data-rail="juegos"><a href="#juegos">Juegos</a></li>
+        <li data-rail="principios"><a href="#principios">Principios</a></li>
+        <li data-rail="contacto"><a href="#contacto">Contacto</a></li>
+        <li class="rail-gap" aria-hidden="true"></li>
+      </ol>
+    </nav>
+    <div class="ruler" aria-hidden="true"><i class="major" style="top:0%"></i><i class="" style="top:2.5%"></i><i class="" style="top:5%"></i><i class="" style="top:7.5%"></i><i class="major" style="top:10%"><b>10</b></i><i class="" style="top:12.5%"></i><i class="" style="top:15%"></i><i class="" style="top:17.5%"></i><i class="major" style="top:20%"><b>20</b></i><i class="" style="top:22.5%"></i><i class="" style="top:25%"></i><i class="" style="top:27.5%"></i><i class="major" style="top:30%"><b>30</b></i><i class="" style="top:32.5%"></i><i class="" style="top:35%"></i><i class="" style="top:37.5%"></i><i class="major" style="top:40%"><b>40</b></i><i class="" style="top:42.5%"></i><i class="" style="top:45%"></i><i class="" style="top:47.5%"></i><i class="major" style="top:50%"><b>50</b></i><i class="" style="top:52.5%"></i><i class="" style="top:55%"></i><i class="" style="top:57.5%"></i><i class="major" style="top:60%"><b>60</b></i><i class="" style="top:62.5%"></i><i class="" style="top:65%"></i><i class="" style="top:67.5%"></i><i class="major" style="top:70%"><b>70</b></i><i class="" style="top:72.5%"></i><i class="" style="top:75%"></i><i class="" style="top:77.5%"></i><i class="major" style="top:80%"><b>80</b></i><i class="" style="top:82.5%"></i><i class="" style="top:85%"></i><i class="" style="top:87.5%"></i><i class="major" style="top:90%"><b>90</b></i><i class="" style="top:92.5%"></i><i class="" style="top:95%"></i><i class="" style="top:97.5%"></i><i class="major" style="top:100%"><b>100</b></i><span class="ruler-mark"><em>000%</em></span></div>
+  </aside>
 
-  <footer class="foot">
-    <p>© 2026 Sebastian Sotomontes. Todos los derechos reservados.</p>
-    <a href="https://github.com/Softsoto" rel="noopener">github.com/Softsoto</a>
-  </footer>
+  <div class="page">
+    <main class="frame">
+      <section class="sec hero" id="inicio" aria-labelledby="t-inicio">
+        <div class="sec-head"><span>01 / Sebastian Sotomontes</span><span>26 proyectos · Escritorio, web y juegos</span></div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 id="t-inicio" class="rv">Sebastian <span>Sotomontes</span></h1>
+            <p class="hero-sub rv">Software que corre en tu equipo.</p>
+            <p class="hero-text rv">Creo aplicaciones de escritorio, web y juegos. Me gustan las que funcionan sin servidores ni cuentas, bien diseñadas y pensadas para gente real.</p>
+            <div class="actions rv">
+              <a class="btn btn-solid" href="#escritorio">Ver proyectos</a>
+              <a class="btn" href="https://github.com/Softsoto" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <ul class="wall rv" aria-label="Algunos proyectos">
+            <li><a href="#soto-player" style="--c:#f0555a"><img class="ico" src="assets/icons/soto-player.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>SOTO PLAYER</span></a></li>
+            <li><a href="#veloxdm" style="--c:#22c58b"><img class="ico" src="assets/icons/veloxdm.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>VeloxDM</span></a></li>
+            <li><a href="#pdf-studio" style="--c:#ec4fa6"><img class="ico" src="assets/icons/pdf-studio.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>PDF Studio</span></a></li>
+            <li><a href="#omnicare" style="--c:#5b96ff"><img class="ico" src="assets/icons/omnicare.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>OmniCare</span></a></li>
+            <li><a href="#mercado-manager" style="--c:#f2a81d"><img class="ico" src="assets/icons/mercado-manager.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>Mercado Manager</span></a></li>
+            <li><a href="#copropiedades" style="--c:#a07bff"><img class="ico" src="assets/icons/copropiedades.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>Copropiedades</span></a></li>
+            <li><a href="#ecmenu-x" style="--c:#7b93ff"><img class="ico" src="assets/icons/ecmenux.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>EcMenu X</span></a></li>
+            <li><a href="#livepaper" style="--c:#c06ff5"><img class="ico" src="assets/icons/livepaper.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>LivePaper</span></a></li>
+            <li><a href="#siglonav" style="--c:#2fb7d6"><img class="ico" src="assets/icons/siglonav.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>SigloNav</span></a></li>
+            <li><a href="#hd-guardian" style="--c:#2bb6e8"><img class="ico" src="assets/icons/hd-guardian.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>HD Guardian</span></a></li>
+            <li><a href="#ssa-studio" style="--c:#1fc8b4"><img class="ico" src="assets/icons/ssa-studio.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>SSA Studio</span></a></li>
+            <li><a href="#transcriptor-de-audio" style="--c:#ff7f3a"><img class="ico" src="assets/icons/transcriptor.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>Transcriptor de Audio</span></a></li>
+            <li><a href="#comanda" style="--c:#2fd17a"><img class="ico" src="assets/icons/comanda.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>Comanda</span></a></li>
+            <li><a href="#crm-personal" style="--c:#f5b92a"><img class="ico" src="assets/icons/crm-personal.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>CRM Personal</span></a></li>
+            <li><a href="#squadcats" style="--c:#9176ff"><img class="ico" src="assets/icons/squadcats.png" alt="" width="128" height="128" loading="lazy" decoding="async"><span>SquadCats</span></a></li>
+            <li><a href="#operacion-quilcue" style="--c:#a5e93a"><span class="ico ico-mono" aria-hidden="true">OQ</span><span>Operación Quilcue</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sec" id="escritorio" aria-labelledby="t-escritorio">
+        <div class="sec-head"><span>02 / Escritorio</span><span>14 proyectos</span></div>
+        <h2 class="sec-title rv" id="t-escritorio">Aplicaciones de escritorio</h2>
+        <div class="cells cells-three">
+          <article class="cell rv" id="soto-player" style="--c:#f0555a">
+            <header class="cell-head"><span class="badge">01</span><span class="kind">Multimedia</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>S</span></div></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/soto-player.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>SOTO <span class="tone">PLAYER</span></h3>
+              <p>Plataforma multimedia para Windows: video, música, streams de red y TV en vivo en una sola app, con skins y complementos.</p>
+              <ul class="tags"><li>Tauri 2</li><li>Rust</li><li>React</li><li>libmpv</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="veloxdm" style="--c:#22c58b">
+            <header class="cell-head"><span class="badge">02</span><span class="kind">Gestor de descargas</span></header>
+            <div class="media"><img src="assets/img/veloxdm.jpg" alt="Captura de VeloxDM" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/veloxdm.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Velox<span class="tone">DM</span></h3>
+              <p>Gestor de descargas con segmentación dinámica, colas, planificador, video, BitTorrent y extensión de navegador.</p>
+              <ul class="tags"><li>C#</li><li>.NET 10</li><li>WebView2</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="pdf-studio" style="--c:#ec4fa6">
+            <header class="cell-head"><span class="badge">03</span><span class="kind">Editor de PDF</span></header>
+            <div class="media"><img src="assets/img/pdf-studio.jpg" alt="Captura de PDF Studio" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/pdf-studio.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>PDF <span class="tone">Studio</span></h3>
+              <p>Editor de PDF completo: crear, editar, anotar, firmar, OCR, formularios y exportar a Office.</p>
+              <ul class="tags"><li>Electron</li><li>Vite</li><li>pdf-lib</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="omnicare" style="--c:#5b96ff">
+            <header class="cell-head"><span class="badge">04</span><span class="kind">Centro de control</span></header>
+            <div class="media"><img src="assets/img/omnicare.jpg" alt="Captura de OmniCare" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/omnicare.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Omni<span class="tone">Care</span></h3>
+              <p>Centro de control para Windows: rendimiento, batería, diagnóstico y actualizaciones, con funciones específicas por marca de equipo.</p>
+              <ul class="tags"><li>C#</li><li>.NET 10</li><li>WebView2</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="mercado-manager" style="--c:#f2a81d">
+            <header class="cell-head"><span class="badge">05</span><span class="kind">Comercio</span></header>
+            <div class="media"><img src="assets/img/mercado-manager.jpg" alt="Captura de Mercado Manager" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/mercado-manager.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Mercado <span class="tone">Manager</span></h3>
+              <p>Administra una tienda de Mercado Libre desde el escritorio, 100 % local y con la API oficial: publicaciones, ventas, envíos y rentabilidad.</p>
+              <ul class="tags"><li>C#</li><li>WPF</li><li>Blazor Hybrid</li><li>SQLite</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="copropiedades" style="--c:#a07bff">
+            <header class="cell-head"><span class="badge">06</span><span class="kind">Administración</span></header>
+            <div class="media"><img src="assets/img/copropiedades.jpg" alt="Captura de Copropiedades" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/copropiedades.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Co<span class="tone">propiedades</span></h3>
+              <p>Administración de conjuntos y edificios: cartera, asambleas, PQRS, contratos, presupuesto y correos masivos.</p>
+              <ul class="tags"><li>C#</li><li>.NET 10</li><li>WPF</li><li>SQLite</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="ecmenu-x" style="--c:#7b93ff">
+            <header class="cell-head"><span class="badge">07</span><span class="kind">Personalización</span></header>
+            <div class="media"><img src="assets/img/ecmenux.jpg" alt="Captura de EcMenu X" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/ecmenux.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>EcMenu <span class="tone">X</span></h3>
+              <p>Personaliza el clic derecho de Windows con más de 50 acciones, submenús y un limpiador, sin permisos de administrador.</p>
+              <ul class="tags"><li>C#</li><li>.NET 10</li><li>WPF</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="livepaper" style="--c:#c06ff5">
+            <header class="cell-head"><span class="badge">08</span><span class="kind">Fondos animados</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>L</span></div></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/livepaper.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Live<span class="tone">Paper</span></h3>
+              <p>Fondos de pantalla animados: escenas 2D y 3D, video, web y apps, con un motor de render WebGL propio.</p>
+              <ul class="tags"><li>C#</li><li>.NET 10</li><li>WebGL</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="siglonav" style="--c:#2fb7d6">
+            <header class="cell-head"><span class="badge">09</span><span class="kind">Navegador</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>S</span></div></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/siglonav.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Siglo<span class="tone">Nav</span></h3>
+              <p>Navegador de doble motor: Chromium para la web actual e Internet Explorer 11 con Java para aplicativos heredados, en la misma ventana.</p>
+              <ul class="tags"><li>C#</li><li>WebView2</li><li>IE11</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="enterprise-sso" style="--c:#f59e0b">
+            <header class="cell-head"><span class="badge">10</span><span class="kind">Seguridad</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>E</span></div></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">SSO</span>
+              <h3>Enterprise <span class="tone">SSO</span></h3>
+              <p>Bóveda de credenciales cifrada que inicia sesión sola en aplicativos web y de escritorio, con una única clave maestra.</p>
+              <ul class="tags"><li>C#</li><li>.NET 10</li><li>AES-256-GCM</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="legionfix" style="--c:#3ddc6a">
+            <header class="cell-head"><span class="badge">11</span><span class="kind">Reparación de PC</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>L</span></div></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">LF</span>
+              <h3>Legion<span class="tone">Fix</span></h3>
+              <p>Diagnóstico y reparación de Windows con una interfaz cinematográfica, donde cada contador y hallazgo es un dato real del equipo.</p>
+              <ul class="tags"><li>C#</li><li>.NET 10</li><li>WPF</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="hd-guardian" style="--c:#2bb6e8">
+            <header class="cell-head"><span class="badge">12</span><span class="kind">Salud de discos</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>H</span></div></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/hd-guardian.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>HD <span class="tone">Guardian</span></h3>
+              <p>Monitor de salud de discos: estado SMART, temperatura, horas de uso y alertas.</p>
+              <ul class="tags"><li>PowerShell</li><li>WMI</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="ssa-studio" style="--c:#1fc8b4">
+            <header class="cell-head"><span class="badge">13</span><span class="kind">Criptografía</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>S</span></div></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/ssa-studio.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>SSA <span class="tone">Studio</span></h3>
+              <p>Cifrado AES, esteganografía y un formato propio .SSA para esconder y proteger archivos dentro de imágenes y audio.</p>
+              <ul class="tags"><li>Python</li><li>Criptografía</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="transcriptor-de-audio" style="--c:#ff7f3a">
+            <header class="cell-head"><span class="badge">14</span><span class="kind">Voz a texto</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>T</span></div></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/transcriptor.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Transcriptor <span class="tone">de Audio</span></h3>
+              <p>Convierte audio y video a texto con Whisper, en tu propio equipo y sin enviar nada a la nube.</p>
+              <ul class="tags"><li>Python</li><li>Whisper</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="sec" id="web" aria-labelledby="t-web">
+        <div class="sec-head"><span>03 / Web</span><span>10 proyectos</span></div>
+        <h2 class="sec-title rv" id="t-web">Web y herramientas en el navegador</h2>
+        <div class="cells cells-three">
+          <article class="cell rv" id="comanda" style="--c:#2fd17a">
+            <header class="cell-head"><span class="badge">15</span><span class="kind">Pedidos por WhatsApp</span></header>
+            <div class="media"><img src="assets/img/comanda.jpg" alt="Captura de Comanda" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/comanda.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Co<span class="tone">manda</span></h3>
+              <p>Menú digital gratis para pequeños negocios: el cliente arma su pedido desde el celular y llega por WhatsApp.</p>
+              <ul class="tags"><li>Next.js 16</li><li>TypeScript</li><li>PostgreSQL</li></ul>
+              <a class="more" href="https://github.com/Softsoto/comanda" rel="noopener">Ver código ↗</a>
+            </div>
+          </article>
+          <article class="cell rv" id="crm-personal" style="--c:#f5b92a">
+            <header class="cell-head"><span class="badge">16</span><span class="kind">Panel personal</span></header>
+            <div class="media"><img src="assets/img/crm-personal.jpg" alt="Captura de CRM Personal" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/crm-personal.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>CRM <span class="tone">Personal</span></h3>
+              <p>Panel personal todo en uno: credenciales, 2FA, notas, proyectos, finanzas, recibos y suscripciones.</p>
+              <ul class="tags"><li>HTML</li><li>JavaScript</li><li>Node</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="epic-intelligence" style="--c:#dcb873">
+            <header class="cell-head"><span class="badge">17</span><span class="kind">Análisis de datos</span></header>
+            <div class="media"><img src="assets/img/epic-intelligence.jpg" alt="Captura de Epic Intelligence" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">EI</span>
+              <h3>Epic <span class="tone">Intelligence</span></h3>
+              <p>Convierte el PDF de exportación de datos de una cuenta de Epic Games en un panel claro, todo en el navegador.</p>
+              <ul class="tags"><li>HTML</li><li>JavaScript</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="editor-pdf" style="--c:#2dd4bf">
+            <header class="cell-head"><span class="badge">18</span><span class="kind">En el navegador</span></header>
+            <div class="media"><img src="assets/img/editor-pdf.jpg" alt="Captura de Editor PDF" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">PDF</span>
+              <h3>Editor <span class="tone">PDF</span></h3>
+              <p>Anota, agrega texto y formas, rota o reordena páginas y exporta. El documento nunca sale de tu equipo.</p>
+              <ul class="tags"><li>HTML</li><li>JavaScript</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="cuentas-de-cobro" style="--c:#4cc08f">
+            <header class="cell-head"><span class="badge">19</span><span class="kind">Documentos</span></header>
+            <div class="media"><img src="assets/img/cuentas-de-cobro.jpg" alt="Captura de Cuentas de cobro" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">CC</span>
+              <h3>Cuentas <span class="tone">de cobro</span></h3>
+              <p>Genera cuentas de cobro en PDF con el valor en letras calculado solo, para independientes en Colombia.</p>
+              <ul class="tags"><li>HTML</li><li>JavaScript</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="generador-de-plantillas" style="--c:#4ba6ff">
+            <header class="cell-head"><span class="badge">20</span><span class="kind">Documentos</span></header>
+            <div class="media"><img src="assets/img/generador-plantillas.jpg" alt="Captura de Generador de plantillas" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">GP</span>
+              <h3>Generador <span class="tone">de plantillas</span></h3>
+              <p>Contratos, cartas y facturas con campos dinámicos y contadores, listos para exportar a PDF.</p>
+              <ul class="tags"><li>HTML</li><li>JavaScript</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="convertidor-de-extensiones" style="--c:#45c3fa">
+            <header class="cell-head"><span class="badge">21</span><span class="kind">Archivos en lote</span></header>
+            <div class="media"><img src="assets/img/convertidor-extensiones.jpg" alt="Captura de Convertidor de extensiones" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">CE</span>
+              <h3>Convertidor <span class="tone">de extensiones</span></h3>
+              <p>Renombra, numera, cambia la extensión y comprime muchos archivos a la vez, sin subirlos a ningún servidor.</p>
+              <ul class="tags"><li>HTML</li><li>JavaScript</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="generador-de-recibos" style="--c:#ffa650">
+            <header class="cell-head"><span class="badge">22</span><span class="kind">Códigos de barras</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>G</span></div></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">GR</span>
+              <h3>Generador <span class="tone">de recibos</span></h3>
+              <p>Recibos de pago editables sobre el propio documento, con códigos de barras GS1 generados a partir de los plazos.</p>
+              <ul class="tags"><li>HTML</li><li>JavaScript</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="squadcats" style="--c:#9176ff">
+            <header class="cell-head"><span class="badge">23</span><span class="kind">Visor local</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>S</span></div></div>
+            <div class="body">
+              <img class="ico" src="assets/icons/squadcats.png" alt="" width="128" height="128" loading="lazy" decoding="async">
+              <h3>Squad<span class="tone">Cats</span></h3>
+              <p>Visor del casillero de Fortnite en una app web local, con inicio de sesión oficial por device-code.</p>
+              <ul class="tags"><li>Python</li><li>FastAPI</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+          <article class="cell rv" id="comederos-de-las-gatas" style="--c:#ff7c9c">
+            <header class="cell-head"><span class="badge">24</span><span class="kind">Hogar inteligente</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>C</span></div></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">CG</span>
+              <h3>Comederos <span class="tone">de las gatas</span></h3>
+              <p>Una sola web para controlar dos comederos inteligentes, por WiFi local o por la nube.</p>
+              <ul class="tags"><li>Python</li><li>Tuya</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="sec" id="juegos" aria-labelledby="t-juegos">
+        <div class="sec-head"><span>04 / Juegos</span><span>2 proyectos</span></div>
+        <h2 class="sec-title rv" id="t-juegos">Juegos y mods</h2>
+        <div class="cells cells-two">
+          <article class="cell rv" id="operacion-quilcue" style="--c:#a5e93a">
+            <header class="cell-head"><span class="badge">25</span><span class="kind">Plataformas 3D</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>Q</span></div></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">OQ</span>
+              <h3>Operación <span class="tone">Quilcue</span></h3>
+              <p>Juego de plataformas 3D con seis mundos, jefes y medallas, y niveles que un bot recorre con física real para validarlos.</p>
+              <ul class="tags"><li>Unity 6</li><li>C#</li><li>URP</li></ul>
+              <span class="more more-off">En desarrollo</span>
+            </div>
+          </article>
+          <article class="cell rv" id="spex-studio" style="--c:#ff5f7c">
+            <header class="cell-head"><span class="badge">26</span><span class="kind">Editor de mods</span></header>
+            <div class="media"><div class="gen" aria-hidden="true"><span>S</span></div></div>
+            <div class="body">
+              <span class="ico ico-mono" aria-hidden="true">SX</span>
+              <h3>SPEX <span class="tone">Studio</span></h3>
+              <p>Editor de mods para Scott Pilgrim EX: niveles, personajes, poderes, sprites y textos, aplicados en memoria sin tocar la carpeta del juego.</p>
+              <ul class="tags"><li>Modding</li><li>Editor</li></ul>
+              <span class="more more-off">Código privado</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="principios" aria-labelledby="t-principios">
+        <div class="sec-head"><span>05 / Principios</span><span>Lo que comparten todos</span></div>
+        <h2 class="sec-title rv" id="t-principios">Hecho <span class="accent">a mi manera.</span></h2>
+        <div class="cells cells-three">
+          <article class="rule rv"><span class="rule-no">01</span><h3>Local primero</h3><p>La mayoría de mis apps guarda todo en tu equipo y funciona sin servidores ni cuentas.</p></article>
+          <article class="rule rv"><span class="rule-no">02</span><h3>Tus archivos son tuyos</h3><p>Las herramientas web procesan los documentos en el navegador. Nada se sube.</p></article>
+          <article class="rule rv"><span class="rule-no">03</span><h3>La herramienta correcta</h3><p>C#, Rust, Python, TypeScript o Unity: uso lo que cada problema pide.</p></article>
+          <article class="rule rv"><span class="rule-no">04</span><h3>Datos reales</h3><p>Lo que ves en pantalla es lo que pasa en tu equipo. Nada de cifras de adorno.</p></article>
+          <article class="rule rv"><span class="rule-no">05</span><h3>Para gente real</h3><p>Problemas concretos: cobrar, administrar un edificio, vender en línea.</p></article>
+          <article class="rule rv"><span class="rule-no">06</span><h3>Diseño con cuidado</h3><p>Una herramienta también se juzga por cómo se siente al usarla.</p></article>
+        </div>
+      </section>
+
+      <section class="sec closing" id="contacto" aria-labelledby="t-contacto">
+        <div class="sec-head"><span>06 / Contacto</span><span>GitHub</span></div>
+        <div class="closing-body">
+          <h2 class="rv" id="t-contacto">¿Quieres ver <span class="accent">más?</span></h2>
+          <p class="rv">La mayoría del código es privado. Con gusto doy acceso de solo lectura a quien quiera revisarlo.</p>
+          <a class="btn btn-solid rv" href="https://github.com/Softsoto" rel="noopener">Ir a GitHub ↗</a>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <span>© 2026 Sebastian Sotomontes. Todos los derechos reservados.</span>
+        <span>Las capturas usan modos demo o datos de ejemplo.</span>
+      </footer>
+    </main>
+  </div>
   <script src="assets/site.js" defer></script>
 </body>
 </html>
