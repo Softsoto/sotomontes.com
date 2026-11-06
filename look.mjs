@@ -30,6 +30,21 @@ export const look = {
   SquadCats: { title: 'Squad|Cats', kind: 'Visor local', color: '#9176ff', icon: 'squadcats' },
   'Comederos de las gatas': { title: 'Comederos |de las gatas', kind: 'Hogar inteligente', color: '#ff7c9c', icon: 'comederos-de-las-gatas' },
 
+  'Estación de diagnóstico': { title: 'Estación |de diagnóstico', kind: 'Servicio técnico', color: '#f5a524', icon: 'estacion-diagnostico' },
+  'Generador de informes': { title: 'Generador |de informes', kind: 'Servicio técnico', color: '#3fd3bd', icon: 'generador-informes' },
+  'Analizador de metadatos PDF': { title: 'Analizador |de metadatos PDF', kind: 'Revisión documental', color: '#34c3a0', icon: 'analizador-metadatos' },
+  'Dashboard personal': { title: 'Dashboard |personal', kind: 'Productividad', color: '#f0b040', icon: 'dashboard-personal' },
+  'Extractor de Audio': { title: 'Extractor |de Audio', kind: 'Audio y video', color: '#f7a23b', icon: 'extractor-audio' },
+  'Telegram Video Saver': { title: 'Telegram |Video Saver', kind: 'Extensión', color: '#46b4ee', icon: 'telegram-video-saver' },
+
+  SotOS: { title: 'Sot|OS', kind: 'Sistema operativo', color: '#8fa8ff', icon: 'sotos' },
+  Cinora: { title: 'Cin|ora', kind: 'App para iPhone', color: '#ff6b81', icon: 'cinora' },
+  'USB de herramientas': { title: 'USB |de herramientas', kind: 'Servicio técnico', color: '#7fd16b', icon: 'usb-herramientas' },
+  'Limpiador de metadatos': { title: 'Limpiador |de metadatos', kind: 'Privacidad', color: '#5ad0c8', icon: 'limpiador-metadatos' },
+  'Amazon Price Tracker': { title: 'Amazon |Price Tracker', kind: 'Automatización', color: '#ffb347', icon: 'amazon-tracker' },
+  'DDNS para escritorio remoto': { title: 'DDNS |para escritorio remoto', kind: 'Redes', color: '#f58a3c', icon: 'ddns-remoto' },
+
+  'Avatar Creator HTML5': { title: 'Avatar Creator |HTML5', kind: 'Preservación', color: '#ff8f5a', icon: 'avatar-creator' },
   'Operación Quilcue': { title: 'Operación |Quilcue', kind: 'Plataformas 3D', color: '#a5e93a', icon: 'operacion-quilcue' },
   'SPEX Studio': { title: 'SPEX |Studio', kind: 'Editor de mods', color: '#ff5f7c', icon: 'spex-studio' },
 };

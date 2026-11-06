@@ -1,13 +1,14 @@
 // Genera index.html y sitemap.xml a partir de projects.mjs y look.mjs. Sin dependencias: `node build.mjs`.
-import { existsSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { categories, projects } from './projects.mjs';
 import { look } from './look.mjs';
+import { novedades } from './novedades.mjs';
 
 const SITE = 'https://sotomontes.com';
 const GITHUB = 'https://github.com/Softsoto';
 const YEAR = 2026;
 const description =
-  'Portafolio de Sebastian Sotomontes: aplicaciones de escritorio, web y juegos. Software que corre en tu equipo, sin servidores ni cuentas.';
+  'Portafolio de Sebastian Sotomontes: aplicaciones de escritorio, web, sistemas y juegos. Software que corre en tu equipo, sin servidores ni cuentas.';
 
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -17,7 +18,11 @@ const pad = (n, size = 2) => String(n).padStart(size, '0');
 
 for (const p of projects) {
   if (!look[p.name]) throw new Error(`Falta ${p.name} en look.mjs`);
+  if (!novedades[p.name]) throw new Error(`Falta ${p.name} en novedades.mjs`);
 }
+
+// Repos que GitHub todavía no ha dejado crear: su botón se activa al publicarlos
+const pending = existsSync('pending.json') ? JSON.parse(readFileSync('pending.json', 'utf8')) : [];
 
 const LOGO = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M4 3h24v8H13v3h15v15H4v-8h15v-3H4z"/></svg>`;
 
@@ -43,16 +48,21 @@ let counter = 0;
 const card = (p) => {
   counter += 1;
   const l = look[p.name];
-  const link = p.url
-    ? `<a class="more" href="${esc(p.url)}" rel="noopener">Ver código ↗</a>`
+  const n = novedades[p.name];
+  const waiting = p.url && pending.includes(p.url.split('/').pop());
+  const link = waiting
+    ? '<span class="more more-off">Próximamente en GitHub</span>'
+    : p.url
+    ? `<a class="gh" href="${esc(p.url)}" rel="noopener">Ver en GitHub ↗</a>`
     : `<span class="more more-off">${esc(p.status ?? 'Código privado')}</span>`;
   return `<article class="cell rv" id="${slug(p.name)}" style="--c:${esc(l.color)}">
-            <header class="cell-head"><span class="badge">${pad(counter)}</span><span class="kind">${esc(l.kind)}</span></header>
+            <header class="cell-head"><span class="badge">${pad(counter)}</span><span class="kind">${esc(l.kind)}</span><span class="ver">${/^\d/.test(n.version) ? 'v' : ''}${esc(n.version)}</span></header>
             <div class="media">${media(p)}</div>
             <div class="body">
               ${icon(p)}
               <h3>${title(p)}</h3>
               <p>${esc(p.desc)}</p>
+              <p class="latest"><b>Novedad</b> ${esc(n.news[0])}</p>
               <ul class="tags">${p.stack.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
               ${link}
             </div>
@@ -192,7 +202,7 @@ const html = `<!doctype html>
       <div class="hero-slot" aria-hidden="true"></div>
       <h1 id="t-inicio" class="rv">Sebastian <span>Sotomontes</span></h1>
       <p class="hero-sub rv">Software que corre en tu equipo.</p>
-      <p class="hero-text rv">Creo aplicaciones de escritorio, web y juegos. Me gustan las que funcionan sin servidores ni cuentas, bien diseñadas y pensadas para gente real.</p>
+      <p class="hero-text rv">Creo aplicaciones de escritorio, web, sistemas y juegos. Me gustan las que funcionan sin servidores ni cuentas, bien diseñadas y pensadas para gente real.</p>
       <div class="actions rv">
         <a class="btn btn-solid" href="#escritorio">Ver los ${projects.length} proyectos</a>
         <a class="btn" href="${GITHUB}" rel="noopener">GitHub ↗</a>
