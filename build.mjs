@@ -1,5 +1,5 @@
 // Genera index.html y sitemap.xml a partir de projects.mjs y look.mjs. Sin dependencias: `node build.mjs`.
-import { writeFileSync } from 'node:fs';
+import { existsSync, writeFileSync } from 'node:fs';
 import { categories, projects } from './projects.mjs';
 import { look } from './look.mjs';
 
@@ -21,12 +21,11 @@ for (const p of projects) {
 
 const LOGO = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M4 3h24v8H13v3h15v15H4v-8h15v-3H4z"/></svg>`;
 
-const icon = (p) => {
-  const l = look[p.name];
-  return l.icon
-    ? `<img class="ico" src="assets/icons/${esc(l.icon)}.png" alt="" width="128" height="128" loading="lazy" decoding="async">`
-    : `<span class="ico ico-mono" aria-hidden="true">${esc(l.mono)}</span>`;
-};
+const iconFile = (name) =>
+  existsSync(`assets/icons/${name}.svg`) ? `assets/icons/${name}.svg` : `assets/icons/${name}.png`;
+
+const icon = (p) =>
+  `<img class="ico" src="${iconFile(look[p.name].icon)}" alt="" width="128" height="128" loading="lazy" decoding="async">`;
 
 const title = (p) => {
   const [a, b] = look[p.name].title.split('|');
@@ -37,8 +36,7 @@ const media = (p) => {
   if (p.image) {
     return `<img src="assets/img/${esc(p.image)}.jpg" alt="Captura de ${esc(p.name)}" width="800" height="500" loading="lazy" decoding="async">`;
   }
-  const letter = p.name.replace(/^Operación /, '').charAt(0);
-  return `<div class="gen" aria-hidden="true"><span>${esc(letter)}</span></div>`;
+  return `<div class="gen" aria-hidden="true"><img src="assets/icons/${esc(look[p.name].icon)}-line.svg" alt="" width="200" height="200" loading="lazy"></div>`;
 };
 
 let counter = 0;
@@ -61,13 +59,24 @@ const card = (p) => {
           </article>`;
 };
 
-const wall = projects
-  .filter((p) => look[p.name].icon || p.name === 'Operación Quilcue')
-  .slice(0, 16)
-  .map(
-    (p) => `<li><a href="#${slug(p.name)}" style="--c:${esc(look[p.name].color)}">${icon(p)}<span>${esc(p.name)}</span></a></li>`,
-  )
-  .join('\n            ');
+// Órbitas de la portada: cada anillo lleva varios iconos repartidos en círculo.
+const inCat = (id, n) => projects.filter((p) => p.cat === id).slice(0, n);
+const orbiters = [...inCat('escritorio', 10), ...inCat('web', 6), ...inCat('juegos', 2)];
+const sizes = [5, 6, 7];
+const orbit = sizes
+  .map((size, ring) => {
+    const start = sizes.slice(0, ring).reduce((a, b) => a + b, 0);
+    const items = orbiters.slice(start, start + size);
+    const arc = look[items[0].name].color;
+    const planets = items
+      .map((p, i) => {
+        const angle = Math.round((360 / size) * i + ring * 24);
+        return `<span class="planet" style="--t:${angle}deg;--c:${esc(look[p.name].color)}"><img src="${iconFile(look[p.name].icon)}" alt="" width="128" height="128"></span>`;
+      })
+      .join('');
+    return `<div class="ring ring-${ring + 1}"><svg viewBox="0 0 200 200"><circle class="ring-ticks" cx="100" cy="100" r="99"/><circle class="ring-arc" cx="100" cy="100" r="99" style="stroke:${esc(arc)}" pathLength="360"/></svg>${planets}</div>`;
+  })
+  .join('\n        ');
 
 const nav = [
   { id: 'inicio', label: 'Inicio' },
@@ -75,7 +84,7 @@ const nav = [
   { id: 'principios', label: 'Principios' },
   { id: 'contacto', label: 'Contacto' },
 ];
-const secNo = (id) => pad(nav.findIndex((n) => n.id === id) + 1);
+const secNo = (id) => pad(nav.findIndex((n) => n.id === id));
 
 const sections = categories
   .map((c) => {
@@ -165,26 +174,34 @@ const html = `<!doctype html>
     <div class="ruler" aria-hidden="true">${ticks}<span class="ruler-mark"><em>000%</em></span></div>
   </aside>
 
+  <a class="traveler" href="#inicio" aria-label="Volver al inicio">
+    <svg class="traveler-ring" viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="traveler-ticks" cx="50" cy="50" r="47"/>
+      <circle class="traveler-progress" cx="50" cy="50" r="47" pathLength="100"/>
+    </svg>
+    ${LOGO}
+  </a>
+
+  <section class="sec hero pre" id="inicio" aria-labelledby="t-inicio">
+    <div class="orbit" aria-hidden="true">
+      <div class="orbit-move">
+        ${orbit}
+      </div>
+    </div>
+    <div class="hero-center">
+      <div class="hero-slot" aria-hidden="true"></div>
+      <h1 id="t-inicio" class="rv">Sebastian <span>Sotomontes</span></h1>
+      <p class="hero-sub rv">Software que corre en tu equipo.</p>
+      <p class="hero-text rv">Creo aplicaciones de escritorio, web y juegos. Me gustan las que funcionan sin servidores ni cuentas, bien diseñadas y pensadas para gente real.</p>
+      <div class="actions rv">
+        <a class="btn btn-solid" href="#escritorio">Ver los ${projects.length} proyectos</a>
+        <a class="btn" href="${GITHUB}" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
   <div class="page">
     <main class="frame">
-      <section class="sec hero" id="inicio" aria-labelledby="t-inicio">
-        <div class="sec-head"><span>${secNo('inicio')} / Sebastian Sotomontes</span><span>${projects.length} proyectos · Escritorio, web y juegos</span></div>
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <h1 id="t-inicio" class="rv">Sebastian <span>Sotomontes</span></h1>
-            <p class="hero-sub rv">Software que corre en tu equipo.</p>
-            <p class="hero-text rv">Creo aplicaciones de escritorio, web y juegos. Me gustan las que funcionan sin servidores ni cuentas, bien diseñadas y pensadas para gente real.</p>
-            <div class="actions rv">
-              <a class="btn btn-solid" href="#escritorio">Ver proyectos</a>
-              <a class="btn" href="${GITHUB}" rel="noopener">GitHub ↗</a>
-            </div>
-          </div>
-          <ul class="wall rv" aria-label="Algunos proyectos">
-            ${wall}
-          </ul>
-        </div>
-      </section>
-
       ${sections}
 
       <section class="sec" id="principios" aria-labelledby="t-principios">
