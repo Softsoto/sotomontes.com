@@ -5,7 +5,7 @@ const web = 'Navegador web, sin instalación';
 
 export const novedades = {
   'SOTO PLAYER': { version: '0.1.0', status: 'Funcional', platform: win, news: ['Complementos de catálogo con películas, series, fuentes y subtítulos.', 'Internet Archive integrado, con contenido de dominio público y Creative Commons.', 'Menú contextual con submenús de audio, subtítulos y velocidad.', 'Complementos aislados con permisos y pruebas de rendimiento.'] },
-  VeloxDM: { version: '0.4.1', status: 'Funcional', platform: win, news: ['Si un sitio exige una verificación, la descarga abre tu navegador para que la resuelvas tú.', 'Tabla de 1311 sitios de alojamiento y motores por plataforma.', 'Capturador de enlaces propio con complementos por sitio.', 'Barra de progreso de vídeo con el tamaño total desde el inicio.'] },
+  VeloxDM: { version: '0.5.2', status: 'Funcional', platform: win, news: ['Si un sitio exige una verificación, la descarga abre tu navegador para que la resuelvas tú.', 'Tabla de 1311 sitios de alojamiento y motores por plataforma.', 'Capturador de enlaces propio con complementos por sitio.', 'Barra de progreso de vídeo con el tamaño total desde el inicio.'] },
   'PDF Studio': { version: '0.5.0', status: 'En desarrollo', platform: win, news: ['Versión 0.5.0 con unas 60 herramientas y plantillas editables.'] },
   OmniCare: { version: '0.1.0', status: 'En desarrollo', platform: win, news: ['Primera versión con funciones para ocho marcas de equipos.'] },
   'Mercado Manager': { version: '1.2.0', status: 'Estable', platform: win, news: ['Interfaz rediseñada, preguntas y mensajes de posventa.', 'Envíos y guías con impresión en mosaico.'] },
