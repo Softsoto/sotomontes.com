@@ -22,7 +22,8 @@ for (const p of projects) {
 }
 
 // Repos que GitHub todavía no ha dejado crear: su botón se activa al publicarlos
-const pending = existsSync('pending.json') ? JSON.parse(readFileSync('pending.json', 'utf8')) : [];
+const pendingText = existsSync('pending.json') ? readFileSync('pending.json', 'utf8').trim() : '';
+const pending = pendingText ? [JSON.parse(pendingText)].flat() : [];
 
 const LOGO = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M4 3h24v8H13v3h15v15H4v-8h15v-3H4z"/></svg>`;
 
