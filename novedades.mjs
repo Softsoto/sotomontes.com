@@ -40,6 +40,7 @@ export const novedades = {
   'Limpiador de metadatos': { version: '1.0', status: 'Funcional', platform: 'Windows, con Python', news: ['Limpia imágenes, Office y PDF, también por carpetas.'] },
   'Amazon Price Tracker': { version: '1.0', status: 'Funcional', platform: 'Windows, con Python', news: ['Aviso por WhatsApp sin repetir el mismo precio.'] },
   'DDNS para escritorio remoto': { version: '1.0', status: 'Funcional', platform: 'Windows, con PowerShell', news: ['Actualiza el registro solo cuando cambia la IP.'] },
+  'Dos Lunas': { version: '1.0', status: 'Estable', platform: 'Navegador web, sin instalación', news: ['Ya se puede jugar en esta web: 13 juegos, logros y secretos.'] },
   'Operación Quilcue': { version: '0.2.0', status: 'En desarrollo', platform: 'Windows', news: ['Seis mundos jugables con jefes y medallas.'] },
   'SPEX Studio': { version: '1.0', status: 'Funcional', platform: 'Windows', news: ['Editor de niveles, personajes, poderes, sprites y textos.'] },
   'Avatar Creator HTML5': { version: '1.0', status: 'Estable', platform: web, news: ['Funciona sin Flash ni instalación, en tres idiomas.'] },

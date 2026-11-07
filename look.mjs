@@ -44,6 +44,7 @@ export const look = {
   'Amazon Price Tracker': { title: 'Amazon |Price Tracker', kind: 'Automatización', color: '#ffb347', icon: 'amazon-tracker' },
   'DDNS para escritorio remoto': { title: 'DDNS |para escritorio remoto', kind: 'Redes', color: '#f58a3c', icon: 'ddns-remoto' },
 
+  'Dos Lunas': { title: 'Dos |Lunas', kind: 'Arcade', color: '#ffd27a', icon: 'dos-lunas' },
   'Avatar Creator HTML5': { title: 'Avatar Creator |HTML5', kind: 'Preservación', color: '#ff8f5a', icon: 'avatar-creator' },
   'Operación Quilcue': { title: 'Operación |Quilcue', kind: 'Plataformas 3D', color: '#a5e93a', icon: 'operacion-quilcue' },
   'SPEX Studio': { title: 'SPEX |Studio', kind: 'Editor de mods', color: '#ff5f7c', icon: 'spex-studio' },

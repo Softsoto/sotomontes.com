@@ -117,6 +117,24 @@ function spin(now) {
   if (heroVisible && !calm.matches) requestAnimationFrame(spin);
 }
 
+// Una puerta escondida: cinco toques seguidos en el pie, o escribir "luna"
+const door = document.querySelector('.secret-door');
+let taps = 0;
+let lastTap = 0;
+door?.addEventListener('click', () => {
+  const now = performance.now();
+  taps = now - lastTap <= 600 ? taps + 1 : 1;
+  lastTap = now;
+  if (taps >= 5) location.assign('arcade/');
+});
+let typed = '';
+addEventListener('keydown', (event) => {
+  if (event.ctrlKey || event.metaKey || event.altKey || event.key.length !== 1) return;
+  typed = (typed + event.key.toLowerCase()).slice(-4);
+  if (typed === 'luna') location.assign('arcade/');
+});
+console.log('%c☾ ☾', 'font-size:20px;color:#ffd27a', 'Hay algo escondido en esta página. Escribe la palabra que brilla de noche.');
+
 let queued = false;
 function queue() {
   if (!queued) {

@@ -127,6 +127,9 @@ export const projects = [
     stack: ['PowerShell', 'Cloudflare API'] },
 
   // Juegos
+  { name: 'Dos Lunas', play: 'arcade/', cat: 'juegos', image: 'dos-lunas',
+    desc: 'Trece juegos en pixel art hechos desde cero: pinball, carreras, laberintos, mascotas y más, con logros y puntajes.',
+    stack: ['TypeScript', 'Canvas', 'React'] },
   { name: 'Operación Quilcue', cat: 'juegos', status: 'En desarrollo',
     desc: 'Juego de plataformas 3D con seis mundos, jefes y medallas, y niveles que un bot recorre con física real para validarlos.',
     stack: ['Unity 6', 'C#', 'URP'] },

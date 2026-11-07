@@ -483,6 +483,7 @@ a.more:hover { text-decoration: underline; text-underline-offset: 3px; }
   letter-spacing: -.025em;
 }
 .closing-body p { max-width: 32em; color: var(--muted); }
+.secret-door { cursor: default; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
 .foot {
   position: relative;
   display: flex;

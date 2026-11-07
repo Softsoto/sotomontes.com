@@ -80,6 +80,8 @@ export const logos = {
     art: line('M10 12v42h44') + line('M18 20l10 12 8-7 14 17') + line('M42 42h8v-8', 3.500) },
   'ddns-remoto': { a: '#f58a3c', b: '#b63a1c', color: '#f58a3c',
     art: line('M12 11h40a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3V14a3 3 0 0 1 3-3zM24 53h16M32 41v12') + line('M22 26a10 10 0 0 1 18-5M42 26a10 10 0 0 1-18 5', 3) + line('M41 15v6h-6M23 37v-6h6', 3) },
+  'dos-lunas': { a: '#2a2f6e', b: '#0d0e2b', ink: '#ffd27a', color: '#ffd27a',
+    art: '<path d="M30 10a17 17 0 1 0 0 34 14 14 0 1 1 0-34z" fill="{s}"/>' + dot(45, 44, 8) + dot(50, 15, 2) + dot(40, 23, 1.500) },
   'avatar-creator': { a: '#ff8f5a', b: '#c7305f', color: '#ff8f5a',
     art: ring(32, 23, 12) + line('M11 55c2-13 11-18 21-18s19 5 21 18') },
 };

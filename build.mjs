@@ -50,7 +50,9 @@ const card = (p) => {
   const l = look[p.name];
   const n = novedades[p.name];
   const waiting = p.url && pending.includes(p.url.split('/').pop());
-  const link = waiting
+  const link = p.play
+    ? `<a class="gh" href="${esc(p.play)}">Jugar ↗</a>`
+    : waiting
     ? '<span class="more more-off">Próximamente en GitHub</span>'
     : p.url
     ? `<a class="gh" href="${esc(p.url)}" rel="noopener">Ver en GitHub ↗</a>`
@@ -232,7 +234,7 @@ const html = `<!doctype html>
       </section>
 
       <footer class="foot">
-        <span>© ${YEAR} Sebastian Sotomontes. Todos los derechos reservados.</span>
+        <span class="secret-door">© ${YEAR} Sebastian Sotomontes. Todos los derechos reservados.</span>
         <span>Las capturas usan modos demo o datos de ejemplo.</span>
       </footer>
     </main>
